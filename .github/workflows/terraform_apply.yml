@@ -10,10 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    - name: Navigate to Terraform directory
-      run: cd terraform
-
+      
     - name: Checkout Repo
       uses: actions/checkout@v2
 
@@ -21,7 +18,7 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: Terraform Init
-      run: terraform init
+      run: terraform init terraform/
 
     - name: Terraform Validate
       run: terraform validate
