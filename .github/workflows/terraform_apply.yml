@@ -8,9 +8,12 @@ on:
 jobs:
   terraform:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: terraform
 
     steps:
-      
+
     - name: Checkout Repo
       uses: actions/checkout@v2
 
@@ -18,7 +21,7 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: Terraform Init
-      run: terraform init terraform/
+      run: terraform init
 
     - name: Terraform Validate
       run: terraform validate
