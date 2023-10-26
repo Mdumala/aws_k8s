@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "TF-K8S-BUCKET"
+  bucket = "tf-k8s-bucket"
   acl    = "private"
 
   tags = {
