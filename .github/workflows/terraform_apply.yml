@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+    - name: Navigate to Terraform directory
+      run: cd terraform
+
     - name: Checkout Repo
       uses: actions/checkout@v2
 
